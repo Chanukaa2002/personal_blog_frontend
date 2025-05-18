@@ -2,8 +2,11 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.Page";
 import Post from "./pages/Post.Page";
+import Login from "./pages/Login.Page";
+import Dashboard from "./pages/AuthorDashboard.Page";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
+import CommingZoon from "./components/ComminZoon";
 function App() {
   return (
     <Router>
@@ -19,8 +22,11 @@ function App() {
               {" "}
               {/* Add top margin to account for fixed navbar */}
               <Routes>
-                <Route path="/" element={<Home />} />
+                {/* <Route path="/" element={<Home />} /> */}
+                <Route path="/" element={<CommingZoon />} />
                 <Route path="/post/:id" element={<Post />} />
+                <Route path="/chanuka/login" element={<Login />} />
+                <Route path="/dashboard" element={<Dashboard />} />
               </Routes>
             </div>
           </div>
